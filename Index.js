@@ -53,7 +53,7 @@ var outerWidth = 1060;
       var tipNumberFormat = d3.format(",");
       var tip = d3.tip()
         .attr("class", "d3-tip")
-        .offset([-10, 0])
+        .offset([-8, 0])
         .html(function(d) {
           return [
             d[colorColumn],
@@ -176,7 +176,7 @@ var colorLegend = d3.legend.color()
             tip.show(d);
           
             // Fix the issue where the tip goes off the screen.
-            d3.select(".d3-tip").style("left", "100px");
+            d3.select(".d3-tip");
           })
           .on("mouseout", tip.hide);
         bars.exit().remove();
