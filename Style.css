@@ -1,0 +1,44 @@
+.axis text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+  }
+  .axis .label {
+    font-size: 20pt;
+  }
+
+  .axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .color-legend text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19pt;
+  }
+  
+  .d3-tip {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 19pt;
+    line-height: 1;
+    padding: 7px;
+    background: rgba(96, 94, 94, 0.4);
+    color: rgba(252, 247, 247, 1);
+    border-radius: 20px;
+  }
+  .xlabel {
+    font-size: 35pt;
+    font-family: 'Open Sans', sans-serif;
+    color :#333333;
+  }
+  .ylabel {
+    font-size: 35pt;
+    font-family: 'Open Sans', sans-serif;
+    color :#333333;
+  }
+  .religionlabel{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 35pt;
+    color :#0000FF;
+
+  }
