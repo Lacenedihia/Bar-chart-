@@ -1,6 +1,6 @@
 .axis text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 13pt;
+  font-size: 14pt;
 }
 .axis .label {
   font-size: 20pt;
@@ -14,7 +14,7 @@
 
 .color-legend text {
   font-family: 'Open Sans', sans-serif;
-  font-size: 19pt;
+  font-size: 20pt;
 }
 
 .d3-tip {
@@ -27,16 +27,22 @@
   border-radius: 25px;
 }
 .xlabel {
-  font-size: 35pt;
+  font-size: 30pt;
   font-family: 'Open Sans', sans-serif;
-  color :#333333;
+  color :hsl(0, 0%, 20%);
 }
 .ylabel {
-  font-size: 35pt;
+  font-size: 30pt;
   font-family: 'Open Sans', sans-serif;
   color :#333333;
 }
 .religionlabel{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30pt;
+  
+
+}
+.titlelabel{
   font-family: 'Open Sans', sans-serif;
   font-size: 35pt;
   

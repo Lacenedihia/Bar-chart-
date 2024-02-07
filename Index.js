@@ -1,8 +1,8 @@
 //Add Axes and Labels +reafactor the code make it cleaner add comments 
 var outerWidth = 1060;
-      var outerHeight = 700;
-      var margin = { left: 210, top: 90, right: 20, bottom: 95 };
-      var barPadding = 0.15;
+var outerHeight = 700;
+var margin = { left: 210, top: 90, right: 20, bottom: 95 };
+var barPadding = 0.15;
 
       var xColumn = "population";
       var yColumn = "country";
@@ -93,12 +93,17 @@ svg.append("text")
   .attr("transform", "translate(" + ((margin.left) / 2) + "," + ((innerHeight+105)/2 ) + ") rotate(-90)")
   .text("Countries");
 //Religion label 
-
 svg.append("text")
   .attr("class", "religionlabel")
   .attr("text-anchor", "middle")
-  .attr("transform", "translate(" + (margin.left +680) + "," + (innerHeight /10) + ") ")
+  .attr("transform", "translate(" + (margin.left +680) + "," + (innerHeight /6.5) + ") ")
   .text("Religion");
+  //title label 
+  svg.append("text")
+  .attr("class", "titlelabel")
+  .attr("text-anchor", "middle")
+  .attr("transform", "translate(" + (margin.left +680) + "," + (innerHeight /10) + ") ")
+  .text("Bar chart countries and Religions");
 var colorLegend = d3.legend.color()
        .scale(colorScale)
         .shapePadding(5.24)
@@ -212,6 +217,8 @@ var colorLegend = d3.legend.color()
       }
       
       d3.csv("religionByCountryTop20.csv", type, render);
+
+      
 
       
       
