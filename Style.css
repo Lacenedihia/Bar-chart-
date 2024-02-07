@@ -8,7 +8,7 @@
 
 .axis path, .axis line {
   fill: none;
-  stroke: #000;
+  stroke: #635F5D;
   shape-rendering: crispEdges;
 }
 
@@ -45,6 +45,7 @@
 .titlelabel{
   font-family: 'Open Sans', sans-serif;
   font-size: 35pt;
+  
   
 
 }

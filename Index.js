@@ -39,12 +39,15 @@ var barPadding = 0.15;
       
       var xAxisG = g.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + innerHeight + ")");
+        .attr("transform", "translate(0," + innerHeight + ")")
+        .attr("fill","#635F5D");
       var yAxisG = g.append("g")
-        .attr("class", "y axis");
+        .attr("class", "y axis")
+        .attr("fill","#635F5D");
       var colorLegendG = g.append("g")
         .attr("class", "color-legend")
-        .attr("transform", "translate(596, 0)");
+        .attr("transform", "translate(650, 75)")
+        .attr("fill","#635F5D");
         //X and Y scale 
       var xScale = d3.scale.linear().range([0, innerWidth]);
       var yScale = d3.scale.ordinal().rangeBands([innerHeight, 0], barPadding);
@@ -72,6 +75,7 @@ var barPadding = 0.15;
       };
       ///Creation of the axes using the d3.svg.axis() function +orientation
       var xAxis = d3.svg.axis().scale(xScale).orient("bottom")
+      
         .ticks(5)
         .tickFormat(customTickFormat)
         .outerTickSize(0);
@@ -84,26 +88,30 @@ svg.append("text")
   .attr("text-anchor", "middle")
   .attr("x", (outerWidth+100) / 2)
   .attr("y", innerHeight + margin.bottom + 65)
-  .text("Population");
+  .text("Population")
+  .attr("fill","#8E8883");
 
 // Append the y-axis label
 svg.append("text")
   .attr("class", "ylabel")
   .attr("text-anchor", "middle")
   .attr("transform", "translate(" + ((margin.left) / 2) + "," + ((innerHeight+105)/2 ) + ") rotate(-90)")
-  .text("Countries");
+  .text("Countries")
+  .attr("fill","#8E8883");;
 //Religion label 
 svg.append("text")
   .attr("class", "religionlabel")
   .attr("text-anchor", "middle")
-  .attr("transform", "translate(" + (margin.left +680) + "," + (innerHeight /6.5) + ") ")
-  .text("Religion");
+  .attr("transform", "translate(" + (margin.left +720) + "," + (innerHeight /3.5) + ") ")
+  .text("Religion")
+  .attr("fill","#8E8883");;
   //title label 
   svg.append("text")
   .attr("class", "titlelabel")
   .attr("text-anchor", "middle")
-  .attr("transform", "translate(" + (margin.left +680) + "," + (innerHeight /10) + ") ")
-  .text("Bar chart countries and Religions");
+  .attr("transform", "translate(" + (margin.left +400) + "," + (innerHeight /12) + ") ")
+  .text("Bar chart countries and Religions")
+  .attr("fill","#635F5D");
 var colorLegend = d3.legend.color()
        .scale(colorScale)
         .shapePadding(5.24)
@@ -116,6 +124,7 @@ var colorLegend = d3.legend.color()
         var nested = d3.nest()
           .key(function (d){ return d[layerColumn]; })
           .entries(data);
+        
 
         var stack = d3.layout.stack()
           .y(function (d){ return d[xColumn]; })
